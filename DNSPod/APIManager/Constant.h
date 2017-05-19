@@ -11,7 +11,5 @@
 
 #define BASEURL @"https://dnsapi.cn/"
 
-#define INTERFACE_URI_USER_DETAIL @"User.Detail"
-
 
 #endif /* Constant_h */

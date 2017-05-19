@@ -43,7 +43,6 @@
     if(email && password){
         [User UserDetail:email login_password:password success:^(NSURLResponse *response, id responseObject) {
             if ([[responseObject jk_dictionaryForKey:@"status"] jk_integerForKey:@"code"] ==1) {
-                
                 NSDictionary *info = [[responseObject jk_dictionaryForKey:@"info"] jk_dictionaryForKey:@"user"];
                 [AppDelegate APP].user = info;
                 
@@ -63,6 +62,39 @@
 }
 - (void)showPopover:(NSStatusBarButton *)button{
     [self.popover showRelativeToRect:button.bounds ofView:button preferredEdge:NSRectEdgeMaxY];
+}
+- (void)showDomainPanel
+{
+    [NSApp activateIgnoringOtherApps:YES];
+//    _domainWindowController = [[DomainWindowController alloc] initWithWindowNibName:@"DomainWindowController"];
+    [self.domainWindowController.window center];
+    [self.domainWindowController.window orderFront:nil];
+//    [self.domainWindowController showWindow:self];
+}
+- (void)showRecordPanel:(id)item{
+    [NSApp activateIgnoringOtherApps:YES];
+    self.recordWindowController.domainInfo = item;
+    [self.recordWindowController.window center];
+    [self.recordWindowController.window orderFront:nil];
+}
+- (void)exitItemTouched:(NSMenuItem *)item
+{
+    [NSApp terminate:self];
+}
+- (NSWindowController *)recordWindowController{
+    if (!_recordWindowController) {
+        _recordWindowController = [[RecordWindowController alloc] initWithWindowNibName:@"RecordWindowController"];
+        [_recordWindowController.window orderFrontRegardless];
+    }
+    return  _recordWindowController;
+}
+
+- (NSWindowController *)domainWindowController{
+    if (!_domainWindowController) {
+        _domainWindowController = [[DomainWindowController alloc] initWithWindowNibName:@"DomainWindowController"];
+//        [_domainWindowController.window orderFrontRegardless];
+    }
+    return  _domainWindowController;
 }
 -(NSPopover *)popover{
     if(!_popover){

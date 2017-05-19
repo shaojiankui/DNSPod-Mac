@@ -29,5 +29,6 @@
 @property (weak) IBOutlet NSTextField *usergradeTextField;
 @property (weak) IBOutlet NSTextField *qqTextField;
 - (IBAction)logoutTouched:(id)sender;
+- (IBAction)panelTouched:(id)sender;
 
 @end

@@ -80,9 +80,14 @@
 
 - (IBAction)logoutTouched:(id)sender {
     [AppDelegate APP].user = nil;
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:self.accountTextField.stringValue];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:self.accountTextField.stringValue];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
     [self updateViewWithLoginStatus];
+}
+
+- (IBAction)panelTouched:(id)sender {
+    [[AppDelegate APP].popover close];
+    [[AppDelegate APP] showDomainPanel];
 }
 - (IBAction)autoLoginTouched:(id)sender {
     NSLog(@"Switch (%@) is %@", sender, (self.autoLoginButton.state ==1) ? @"checked" : @"unchecked");

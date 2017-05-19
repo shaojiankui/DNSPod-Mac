@@ -8,7 +8,7 @@
 
 #import "APIManager.h"
 #import "Constant.h"
-
+#import "AppDelegate.h"
 static dispatch_once_t onceToken;
 static APIManager *_sharedManager = nil;
 
@@ -82,7 +82,17 @@ static APIManager *_sharedManager = nil;
     [muParameters setObject:@"no" forKey:@"error_on_empty"];
     [muParameters setObject:@"json" forKey:@"format"];
 //    [muParameters setObject:@"" forKey:@"login_token"];
+    if (![parameters objectForKey:@"login_email"]) {
+        NSString *email = [[AppDelegate APP].user objectForKey:@"email"]?:@"";
+        NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:email]?:@"";
+        [muParameters setObject:email forKey:@"login_email"];
+        [muParameters setObject:password forKey:@"login_password"];
+        NSLog(@"login_email:\n%@",email);
+        NSLog(@"login_password:\n%@",password);
 
+    }
+
+    
     NSData *postData = [[self createPostBody:muParameters] dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
     [request setHTTPBody:postData];
@@ -90,7 +100,10 @@ static APIManager *_sharedManager = nil;
 
     
     NSURLSessionDataTask *task = [self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        id result;
+        if (data) {
+            result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        }
         NSLog(@"server respone parameters:\n%@",result);
         dispatch_async(dispatch_get_main_queue(), ^{
             if (result)

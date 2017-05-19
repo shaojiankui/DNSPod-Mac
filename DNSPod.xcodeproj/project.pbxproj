@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B86205131ECEA04700F7888F /* Domain.m in Sources */ = {isa = PBXBuildFile; fileRef = B86205121ECEA04700F7888F /* Domain.m */; };
+		B86205161ECEB38B00F7888F /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = B86205151ECEB38B00F7888F /* Record.m */; };
+		B86205191ECEB3B100F7888F /* Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = B86205181ECEB3B100F7888F /* Monitor.m */; };
+		B862051E1ECEC6E900F7888F /* DomainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B862051C1ECEC6E900F7888F /* DomainWindowController.m */; };
+		B862051F1ECEC6E900F7888F /* DomainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B862051D1ECEC6E900F7888F /* DomainWindowController.xib */; };
+		B86205251ECEC7FE00F7888F /* RecordWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86205231ECEC7FE00F7888F /* RecordWindowController.m */; };
+		B86205261ECEC7FE00F7888F /* RecordWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86205241ECEC7FE00F7888F /* RecordWindowController.xib */; };
+		B862052A1ECEC81E00F7888F /* MonitorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86205281ECEC81E00F7888F /* MonitorWindowController.m */; };
+		B862052B1ECEC81E00F7888F /* MonitorWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86205291ECEC81E00F7888F /* MonitorWindowController.xib */; };
 		B8F54D571ECAC567009855D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F54D561ECAC567009855D1 /* AppDelegate.m */; };
 		B8F54D5A1ECAC567009855D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F54D591ECAC567009855D1 /* main.m */; };
 		B8F54D5C1ECAC567009855D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F54D5B1ECAC567009855D1 /* Assets.xcassets */; };
@@ -24,6 +33,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B86205111ECEA04700F7888F /* Domain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
+		B86205121ECEA04700F7888F /* Domain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Domain.m; sourceTree = "<group>"; };
+		B86205141ECEB38B00F7888F /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
+		B86205151ECEB38B00F7888F /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
+		B86205171ECEB3B100F7888F /* Monitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monitor.h; sourceTree = "<group>"; };
+		B86205181ECEB3B100F7888F /* Monitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monitor.m; sourceTree = "<group>"; };
+		B862051B1ECEC6E900F7888F /* DomainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomainWindowController.h; sourceTree = "<group>"; };
+		B862051C1ECEC6E900F7888F /* DomainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomainWindowController.m; sourceTree = "<group>"; };
+		B862051D1ECEC6E900F7888F /* DomainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomainWindowController.xib; sourceTree = "<group>"; };
+		B86205221ECEC7FE00F7888F /* RecordWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordWindowController.h; sourceTree = "<group>"; };
+		B86205231ECEC7FE00F7888F /* RecordWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordWindowController.m; sourceTree = "<group>"; };
+		B86205241ECEC7FE00F7888F /* RecordWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordWindowController.xib; sourceTree = "<group>"; };
+		B86205271ECEC81E00F7888F /* MonitorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorWindowController.h; sourceTree = "<group>"; };
+		B86205281ECEC81E00F7888F /* MonitorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorWindowController.m; sourceTree = "<group>"; };
+		B86205291ECEC81E00F7888F /* MonitorWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonitorWindowController.xib; sourceTree = "<group>"; };
 		B8F54D521ECAC567009855D1 /* DNSPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNSPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F54D551ECAC567009855D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8F54D561ECAC567009855D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +85,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B862051A1ECEC6E900F7888F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B862051B1ECEC6E900F7888F /* DomainWindowController.h */,
+				B862051C1ECEC6E900F7888F /* DomainWindowController.m */,
+				B862051D1ECEC6E900F7888F /* DomainWindowController.xib */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B86205201ECEC7EC00F7888F /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				B86205271ECEC81E00F7888F /* MonitorWindowController.h */,
+				B86205281ECEC81E00F7888F /* MonitorWindowController.m */,
+				B86205291ECEC81E00F7888F /* MonitorWindowController.xib */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		B86205211ECEC7EC00F7888F /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				B86205221ECEC7FE00F7888F /* RecordWindowController.h */,
+				B86205231ECEC7FE00F7888F /* RecordWindowController.m */,
+				B86205241ECEC7FE00F7888F /* RecordWindowController.xib */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
 		B8F54D491ECAC567009855D1 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +162,9 @@
 		B8F54D6A1ECAC9CF009855D1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B86205201ECEC7EC00F7888F /* Monitor */,
+				B86205211ECEC7EC00F7888F /* Record */,
+				B862051A1ECEC6E900F7888F /* Domain */,
 				B8F54D711ECACD06009855D1 /* User */,
 			);
 			path = Controller;
@@ -140,6 +197,12 @@
 				B8F54D891ECAD626009855D1 /* User.m */,
 				B8F54D8B1ECAD6CC009855D1 /* BaseModel.h */,
 				B8F54D8C1ECAD6CC009855D1 /* BaseModel.m */,
+				B86205111ECEA04700F7888F /* Domain.h */,
+				B86205121ECEA04700F7888F /* Domain.m */,
+				B86205141ECEB38B00F7888F /* Record.h */,
+				B86205151ECEB38B00F7888F /* Record.m */,
+				B86205171ECEB3B100F7888F /* Monitor.h */,
+				B86205181ECEB3B100F7888F /* Monitor.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,8 +279,11 @@
 				B8F54D7C1ECAD18B009855D1 /* statusbar@2x.png in Resources */,
 				B8F54D5C1ECAC567009855D1 /* Assets.xcassets in Resources */,
 				B8F54D761ECACD11009855D1 /* UserViewController.xib in Resources */,
+				B862051F1ECEC6E900F7888F /* DomainWindowController.xib in Resources */,
 				B8F54D781ECACEF9009855D1 /* logo.png in Resources */,
 				B8F54D5F1ECAC567009855D1 /* MainMenu.xib in Resources */,
+				B862052B1ECEC81E00F7888F /* MonitorWindowController.xib in Resources */,
+				B86205261ECEC7FE00F7888F /* RecordWindowController.xib in Resources */,
 				B8F54D7B1ECAD18B009855D1 /* statusbar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,11 +295,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B86205191ECEB3B100F7888F /* Monitor.m in Sources */,
 				B8F54D8D1ECAD6CC009855D1 /* BaseModel.m in Sources */,
+				B86205131ECEA04700F7888F /* Domain.m in Sources */,
 				B8F54D8A1ECAD626009855D1 /* User.m in Sources */,
+				B862052A1ECEC81E00F7888F /* MonitorWindowController.m in Sources */,
 				B8F54D941ECAE3D7009855D1 /* NSArray+JKSafeAccess.m in Sources */,
 				B8F54D911ECAE3C9009855D1 /* NSDictionary+JKSafeAccess.m in Sources */,
+				B86205161ECEB38B00F7888F /* Record.m in Sources */,
+				B862051E1ECEC6E900F7888F /* DomainWindowController.m in Sources */,
 				B8F54D861ECAD5BE009855D1 /* APIManager.m in Sources */,
+				B86205251ECEC7FE00F7888F /* RecordWindowController.m in Sources */,
 				B8F54D751ECACD11009855D1 /* UserViewController.m in Sources */,
 				B8F54D5A1ECAC567009855D1 /* main.m in Sources */,
 				B8F54D571ECAC567009855D1 /* AppDelegate.m in Sources */,
