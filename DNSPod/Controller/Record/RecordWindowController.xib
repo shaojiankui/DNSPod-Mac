@@ -16,20 +16,21 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="域名记录" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <rect key="contentRect" x="196" y="240" width="756" height="421"/>
+            <rect key="contentRect" x="196" y="240" width="761" height="434"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <value key="minSize" type="size" width="761" height="434"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="756" height="421"/>
+                <rect key="frame" x="0.0" y="0.0" width="761" height="434"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkR-tB-wo9">
-                        <rect key="frame" x="0.0" y="0.0" width="756" height="421"/>
+                        <rect key="frame" x="0.0" y="0.0" width="761" height="434"/>
                         <clipView key="contentView" id="geS-4N-NEq">
-                            <rect key="frame" x="1" y="0.0" width="754" height="405"/>
+                            <rect key="frame" x="1" y="0.0" width="759" height="433"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="ulk-yP-8UC" id="Mj5-P0-8SD">
-                                    <rect key="frame" x="0.0" y="0.0" width="755" height="382"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="759" height="410"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -116,7 +117,7 @@
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </tableHeaderCell>
-                                            <buttonCell key="dataCell" type="roundRect" title="删除" bezelStyle="roundedRect" image="98D4C09B-A9D2-42C3-A662-AC3A9C4CD204" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="1VR-f3-qPZ">
+                                            <buttonCell key="dataCell" type="roundRect" title="删除" bezelStyle="roundedRect" image="59D4AB55-C26A-4E66-B13F-06BBFCDFB0F4" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="1VR-f3-qPZ">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="cellTitle"/>
                                             </buttonCell>
@@ -178,8 +179,8 @@
                                 </tableView>
                             </subviews>
                         </clipView>
-                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="ob3-lZ-Q2U">
-                            <rect key="frame" x="1" y="405" width="754" height="15"/>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ob3-lZ-Q2U">
+                            <rect key="frame" x="1" y="418" width="754" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="Edg-4b-wdh">
@@ -187,7 +188,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" canDrawConcurrently="YES" id="ulk-yP-8UC">
-                            <rect key="frame" x="0.0" y="0.0" width="755" height="23"/>
+                            <rect key="frame" x="0.0" y="0.0" width="759" height="23"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
@@ -202,11 +203,11 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="332" y="201.5"/>
+            <point key="canvasLocation" x="334.5" y="208"/>
         </window>
     </objects>
     <resources>
-        <image name="98D4C09B-A9D2-42C3-A662-AC3A9C4CD204" width="1" height="1">
+        <image name="59D4AB55-C26A-4E66-B13F-06BBFCDFB0F4" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

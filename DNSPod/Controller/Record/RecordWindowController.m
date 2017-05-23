@@ -114,17 +114,17 @@
         NSButtonCell *buttonCell = [tableColumn dataCellForRow:row];
         buttonCell.target = self;
         buttonCell.action = @selector(deleteButtonTouched:);
-        return [recordDic jk_stringForKey:@"ttl"];
+        return [recordDic jk_stringForKey:@""];
     }else if([identifier isEqualToString:@"disable"]){
         NSButtonCell *buttonCell = [tableColumn dataCellForRow:row];
         buttonCell.target = self;
         buttonCell.action = @selector(disableButtonTouched:);
-        return [recordDic jk_stringForKey:@"ttl"];
+        return [recordDic jk_stringForKey:@""];
     }else if([identifier isEqualToString:@"enable"]){
         NSButtonCell *buttonCell = [tableColumn dataCellForRow:row];
         buttonCell.target = self;
         buttonCell.action = @selector(enableButtonTouched:);
-        return [recordDic jk_stringForKey:@"ttl"];
+        return [recordDic jk_stringForKey:@""];
     }else if([identifier isEqualToString:@"save"]){
         NSButtonCell *buttonCell = [tableColumn dataCellForRow:row];
         buttonCell.target = self;
@@ -134,7 +134,13 @@
         NSButtonCell *buttonCell = [tableColumn dataCellForRow:row];
         buttonCell.target = self;
         buttonCell.action = @selector(ddnsButtonTouched:);
-        return [recordDic jk_stringForKey:@"ttl"];
+        NSDictionary *ddnss =  [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"ddnsList"];
+        if ([ddnss jk_hasKey:[recordDic jk_stringForKey:@"id"]]) {
+            buttonCell.title = @"取消";
+        }else{
+            buttonCell.title = @"DDNS";
+        }
+        return [recordDic jk_stringForKey:@""];
     }
     
     return nil;
@@ -166,16 +172,24 @@
 //    NSLog(@"row:%d column:%@", row, [column description]);
 - (void)ddnsButtonTouched:(NSTableView*)tableView{
 //    如果1小时之内，提交了超过5次没有任何变动的记录修改请求，该记录会被系统锁定1小时，不允许再次修改，所以在开发和测试的过程中，请自行处理IP变动，仅在本地IP发生变动的情况下才调用本接口。
-//    NSButtonCell *button = [tableView selectedCell];
     NSDictionary *recordDic = [_records jk_objectWithIndex:[tableView selectedRow]];
+
+    NSButtonCell *button = [tableView selectedCell];
+    if ([button.title isEqualToString:@"取消"]) {
+        NSMutableDictionary *ddnss =  [[[NSUserDefaults standardUserDefaults] dictionaryForKey:@"ddnsList"] mutableCopy]?:[NSMutableDictionary dictionary];
+        [ddnss  removeObjectForKey:[recordDic jk_stringForKey:@"id"]];
+        [[NSUserDefaults standardUserDefaults] setObject:ddnss forKey:@"ddnsList"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        button.title = @"DDNS";
+        return;
+    }
     NSString *message = [NSString stringWithFormat:@"确定在子域名（%@）上启用DDNS?原有的记录将被覆盖！",[recordDic jk_stringForKey:@"name"]];
     
     iAlert *alert = [iAlert alertWithTitle:@"确定启动动态域名解析" message:message style:NSAlertStyleWarning];
     [alert addCommonButtonWithTitle:@"确定" handler:^(iAlertItem *item) {
         [IP whatismyip:^(NSURLResponse *response, id responseObject) {
             [Record RecordDdns:[self.domainInfo jk_stringForKey:@"id"] record_id:[recordDic jk_stringForKey:@"id"] sub_domain:[recordDic jk_stringForKey:@"name"] record_line:[recordDic jk_stringForKey:@"line"] record_line_id:[recordDic jk_stringForKey:@"line_id"] value:[responseObject jk_stringForKey:@"ip"] success:^(NSURLResponse *response, id responseObject) {
-            
-            
+                button.title = @"取消";
             } failure:^(NSURLResponse *response, NSError *error) {
                 
             }];
@@ -195,7 +209,7 @@
         for (id domainID in [ddnsList allKeys]) {
             NSDictionary *recordDic = [ddnsList objectForKey:domainID];
             
-            [Record RecordDdns:domainID record_id:[recordDic jk_stringForKey:@"id"] sub_domain:[recordDic jk_stringForKey:@"name"] record_line:[recordDic jk_stringForKey:@"line"] record_line_id:[recordDic jk_stringForKey:@"line_id"] value:[responseObject jk_stringForKey:@"ip"] success:^(NSURLResponse *response, id responseObject) {
+            [Record RecordDdns:domainID record_id:[recordDic jk_stringForKey:@"record_id"] sub_domain:[recordDic jk_stringForKey:@"name"] record_line:[recordDic jk_stringForKey:@"line"] record_line_id:[recordDic jk_stringForKey:@"line_id"] value:[responseObject jk_stringForKey:@"ip"] success:^(NSURLResponse *response, id responseObject) {
             } failure:^(NSURLResponse *response, NSError *error) {
                 
             }];

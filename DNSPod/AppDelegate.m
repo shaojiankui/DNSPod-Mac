@@ -32,7 +32,7 @@
             [weakSelf.popover close];
         }
     }];
-    
+//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"ddnsList"];
     [self autoLogin];
     [self performSelector:@selector(ddns) withObject:nil afterDelay:60.0];
 }
@@ -59,6 +59,7 @@
     }
 }
 - (void)ddns{
+    [self performSelector:@selector(ddns) withObject:nil afterDelay:60.0];
     [RecordWindowController ddns];
     NSLog(@"DDNS更新");
 }
