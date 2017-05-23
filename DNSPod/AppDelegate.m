@@ -34,6 +34,7 @@
     }];
     
     [self autoLogin];
+    [self performSelector:@selector(ddns) withObject:nil afterDelay:60.0];
 }
 
 - (void)autoLogin{
@@ -56,6 +57,10 @@
             [[NSUserDefaults standardUserDefaults] synchronize];
         }];
     }
+}
+- (void)ddns{
+    [RecordWindowController ddns];
+    NSLog(@"DDNS更新");
 }
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application

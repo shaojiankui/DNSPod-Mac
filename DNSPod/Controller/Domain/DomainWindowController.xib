@@ -36,7 +36,7 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn identifier="domain" width="355" minWidth="40" maxWidth="1000" id="fgq-ek-ANE">
+                                        <tableColumn identifier="domain" width="280" minWidth="40" maxWidth="1000" id="fgq-ek-ANE">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="域名">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -50,11 +50,11 @@
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
                                                 <tableCellView id="ZXG-dh-dVn">
-                                                    <rect key="frame" x="1" y="1" width="355" height="32"/>
+                                                    <rect key="frame" x="1" y="1" width="280" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" tag="666" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzh-Wy-poV">
-                                                            <rect key="frame" x="0.0" y="0.0" width="360" height="30"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="285" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="fxp-MB-IIw">
                                                                 <font key="font" metaFont="system"/>
@@ -83,7 +83,7 @@
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
                                                 <tableCellView id="19F-7A-3Cs">
-                                                    <rect key="frame" x="359" y="1" width="100" height="32"/>
+                                                    <rect key="frame" x="284" y="1" width="100" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="666" translatesAutoresizingMaskIntoConstraints="NO" id="18c-ts-wbu">
@@ -100,7 +100,7 @@
                                                 </tableCellView>
                                             </prototypeCellViews>
                                         </tableColumn>
-                                        <tableColumn identifier="monitor" width="182" minWidth="10" maxWidth="3.4028234663852886e+38" id="SW8-Xd-Bh0">
+                                        <tableColumn identifier="monitor" width="257" minWidth="10" maxWidth="3.4028234663852886e+38" id="SW8-Xd-Bh0">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="宕机监控">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -114,7 +114,7 @@
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
                                                 <tableCellView id="NJe-WX-IZk">
-                                                    <rect key="frame" x="462" y="1" width="182" height="32"/>
+                                                    <rect key="frame" x="387" y="1" width="257" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="666" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-Td-C7y">

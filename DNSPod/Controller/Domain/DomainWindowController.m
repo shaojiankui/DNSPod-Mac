@@ -81,7 +81,6 @@
     if (row == -1) {
         return;
     }
-    NSString *selectedVoice = [_domains jk_objectWithIndex:row];
     
 }
 - (void)ddnsTouched:(NSButton*)sender{

@@ -16,6 +16,10 @@
 		B86205261ECEC7FE00F7888F /* RecordWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86205241ECEC7FE00F7888F /* RecordWindowController.xib */; };
 		B862052A1ECEC81E00F7888F /* MonitorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86205281ECEC81E00F7888F /* MonitorWindowController.m */; };
 		B862052B1ECEC81E00F7888F /* MonitorWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86205291ECEC81E00F7888F /* MonitorWindowController.xib */; };
+		B8A25F1D1ED422B00085C843 /* IP.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A25F1C1ED422B00085C843 /* IP.m */; };
+		B8A25F221ED423A70085C843 /* iAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A25F211ED423A70085C843 /* iAlert.m */; };
+		B8BC40161ED2A34C006B3CF7 /* DynamicPopUpButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC40151ED2A34C006B3CF7 /* DynamicPopUpButtonCell.m */; };
+		B8BC401A1ED2AD1A006B3CF7 /* OprationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC40191ED2AD1A006B3CF7 /* OprationCell.m */; };
 		B8F54D571ECAC567009855D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F54D561ECAC567009855D1 /* AppDelegate.m */; };
 		B8F54D5A1ECAC567009855D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F54D591ECAC567009855D1 /* main.m */; };
 		B8F54D5C1ECAC567009855D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F54D5B1ECAC567009855D1 /* Assets.xcassets */; };
@@ -48,6 +52,14 @@
 		B86205271ECEC81E00F7888F /* MonitorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorWindowController.h; sourceTree = "<group>"; };
 		B86205281ECEC81E00F7888F /* MonitorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorWindowController.m; sourceTree = "<group>"; };
 		B86205291ECEC81E00F7888F /* MonitorWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonitorWindowController.xib; sourceTree = "<group>"; };
+		B8A25F1B1ED422B00085C843 /* IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IP.h; sourceTree = "<group>"; };
+		B8A25F1C1ED422B00085C843 /* IP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IP.m; sourceTree = "<group>"; };
+		B8A25F201ED423A70085C843 /* iAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAlert.h; sourceTree = "<group>"; };
+		B8A25F211ED423A70085C843 /* iAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAlert.m; sourceTree = "<group>"; };
+		B8BC40141ED2A34C006B3CF7 /* DynamicPopUpButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicPopUpButtonCell.h; sourceTree = "<group>"; };
+		B8BC40151ED2A34C006B3CF7 /* DynamicPopUpButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicPopUpButtonCell.m; sourceTree = "<group>"; };
+		B8BC40181ED2AD1A006B3CF7 /* OprationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OprationCell.h; sourceTree = "<group>"; };
+		B8BC40191ED2AD1A006B3CF7 /* OprationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OprationCell.m; sourceTree = "<group>"; };
 		B8F54D521ECAC567009855D1 /* DNSPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNSPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F54D551ECAC567009855D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8F54D561ECAC567009855D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,11 +120,47 @@
 		B86205211ECEC7EC00F7888F /* Record */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC40171ED2ACF2006B3CF7 /* View */,
 				B86205221ECEC7FE00F7888F /* RecordWindowController.h */,
 				B86205231ECEC7FE00F7888F /* RecordWindowController.m */,
 				B86205241ECEC7FE00F7888F /* RecordWindowController.xib */,
 			);
 			path = Record;
+			sourceTree = "<group>";
+		};
+		B8A25F1E1ED423A30085C843 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				B8A25F1F1ED423A70085C843 /* iAlert */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		B8A25F1F1ED423A70085C843 /* iAlert */ = {
+			isa = PBXGroup;
+			children = (
+				B8A25F201ED423A70085C843 /* iAlert.h */,
+				B8A25F211ED423A70085C843 /* iAlert.m */,
+			);
+			path = iAlert;
+			sourceTree = "<group>";
+		};
+		B8BC40101ED2A2FE006B3CF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B8BC40141ED2A34C006B3CF7 /* DynamicPopUpButtonCell.h */,
+				B8BC40151ED2A34C006B3CF7 /* DynamicPopUpButtonCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B8BC40171ED2ACF2006B3CF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B8BC40181ED2AD1A006B3CF7 /* OprationCell.h */,
+				B8BC40191ED2AD1A006B3CF7 /* OprationCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B8F54D491ECAC567009855D1 = {
@@ -134,10 +182,12 @@
 		B8F54D541ECAC567009855D1 /* DNSPod */ = {
 			isa = PBXGroup;
 			children = (
+				B8A25F1E1ED423A30085C843 /* Vendor */,
+				B8F54D6A1ECAC9CF009855D1 /* Controller */,
+				B8BC40101ED2A2FE006B3CF7 /* View */,
 				B8F54D8E1ECAE3B0009855D1 /* Category */,
 				B8F54D871ECAD5C6009855D1 /* Model */,
 				B8F54D821ECAD5BE009855D1 /* APIManager */,
-				B8F54D6A1ECAC9CF009855D1 /* Controller */,
 				B8F54D551ECAC567009855D1 /* AppDelegate.h */,
 				B8F54D561ECAC567009855D1 /* AppDelegate.m */,
 				B8F54D5B1ECAC567009855D1 /* Assets.xcassets */,
@@ -203,6 +253,8 @@
 				B86205151ECEB38B00F7888F /* Record.m */,
 				B86205171ECEB3B100F7888F /* Monitor.h */,
 				B86205181ECEB3B100F7888F /* Monitor.m */,
+				B8A25F1B1ED422B00085C843 /* IP.h */,
+				B8A25F1C1ED422B00085C843 /* IP.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,17 +347,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8A25F1D1ED422B00085C843 /* IP.m in Sources */,
 				B86205191ECEB3B100F7888F /* Monitor.m in Sources */,
 				B8F54D8D1ECAD6CC009855D1 /* BaseModel.m in Sources */,
 				B86205131ECEA04700F7888F /* Domain.m in Sources */,
 				B8F54D8A1ECAD626009855D1 /* User.m in Sources */,
 				B862052A1ECEC81E00F7888F /* MonitorWindowController.m in Sources */,
+				B8BC401A1ED2AD1A006B3CF7 /* OprationCell.m in Sources */,
 				B8F54D941ECAE3D7009855D1 /* NSArray+JKSafeAccess.m in Sources */,
 				B8F54D911ECAE3C9009855D1 /* NSDictionary+JKSafeAccess.m in Sources */,
+				B8BC40161ED2A34C006B3CF7 /* DynamicPopUpButtonCell.m in Sources */,
 				B86205161ECEB38B00F7888F /* Record.m in Sources */,
 				B862051E1ECEC6E900F7888F /* DomainWindowController.m in Sources */,
 				B8F54D861ECAD5BE009855D1 /* APIManager.m in Sources */,
 				B86205251ECEC7FE00F7888F /* RecordWindowController.m in Sources */,
+				B8A25F221ED423A70085C843 /* iAlert.m in Sources */,
 				B8F54D751ECACD11009855D1 /* UserViewController.m in Sources */,
 				B8F54D5A1ECAC567009855D1 /* main.m in Sources */,
 				B8F54D571ECAC567009855D1 /* AppDelegate.m in Sources */,

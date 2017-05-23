@@ -462,33 +462,4 @@
     }];
 }
 
-#pragma mark 获取等级允许的记录类型
-+(NSURLSessionDataTask*) RecordType:(id)domain_grade
-                            success:(void (^)(NSURLResponse *response,id responseObject))success
-                            failure:(void (^)(NSURLResponse *response,NSError *error))failure
-{
-    NSDictionary *parameters = @{@"domain_grade":domain_grade};
-    return [[APIManager sharedManager] POST:@"Record.Type" parameters:parameters success:^(NSURLResponse *response, id responseObject) {
-        success(response,responseObject);
-    } failure:^(NSURLResponse *response, NSError *error) {
-        failure(response,error);
-    }];
-}
-
-#pragma mark 获取等级允许的线路线路
-+(NSURLSessionDataTask*) RecordLine:(id)domain_id
-                             domain:(id)domain
-                       domain_grade:(id)domain_grade
-                            success:(void (^)(NSURLResponse *response,id responseObject))success
-                            failure:(void (^)(NSURLResponse *response,NSError *error))failure
-{
-    NSDictionary *parameters = @{@"domain_id":domain_id,@"domain":domain,@"domain_grade":domain_grade};
-    return [[APIManager sharedManager] POST:@"Record.Line" parameters:parameters success:^(NSURLResponse *response, id responseObject) {
-        success(response,responseObject);
-    } failure:^(NSURLResponse *response, NSError *error) {
-        failure(response,error);
-    }];
-}
-
-
 @end

@@ -212,15 +212,5 @@
                                        success:(void (^)(NSURLResponse *response,id responseObject))success
                                        failure:(void (^)(NSURLResponse *response,NSError *error))failure;
 
-#pragma mark 获取等级允许的记录类型
-+(NSURLSessionDataTask*) RecordType:(id)domain_grade
-                            success:(void (^)(NSURLResponse *response,id responseObject))success
-                            failure:(void (^)(NSURLResponse *response,NSError *error))failure;
 
-#pragma mark 获取等级允许的线路线路
-+(NSURLSessionDataTask*) RecordLine:(id)domain_id
-                             domain:(id)domain
-                       domain_grade:(id)domain_grade
-                            success:(void (^)(NSURLResponse *response,id responseObject))success
-                            failure:(void (^)(NSURLResponse *response,NSError *error))failure;
 @end

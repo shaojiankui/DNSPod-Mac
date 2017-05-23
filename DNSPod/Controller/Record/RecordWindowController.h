@@ -11,5 +11,5 @@
 @interface RecordWindowController : NSWindowController
 @property (weak) IBOutlet NSTableView *tableView;
 @property (strong,nonatomic) NSDictionary *domainInfo;
-
++ (void)ddns;
 @end
