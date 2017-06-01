@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8529BD11EDF9F5C00F14D0A /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8529BCF1EDF9F5C00F14D0A /* APIManager.m */; };
+		B8529BD51EDF9F7600F14D0A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8529BD41EDF9F7600F14D0A /* DataManager.m */; };
+		B8529BD81EDFA72400F14D0A /* NSString+JKDictionaryValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B8529BD71EDFA72400F14D0A /* NSString+JKDictionaryValue.m */; };
+		B8529BDB1EDFA73300F14D0A /* NSDictionary+JKJSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = B8529BDA1EDFA73300F14D0A /* NSDictionary+JKJSONString.m */; };
 		B86205131ECEA04700F7888F /* Domain.m in Sources */ = {isa = PBXBuildFile; fileRef = B86205121ECEA04700F7888F /* Domain.m */; };
 		B86205161ECEB38B00F7888F /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = B86205151ECEB38B00F7888F /* Record.m */; };
 		B86205191ECEB3B100F7888F /* Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = B86205181ECEB3B100F7888F /* Monitor.m */; };
@@ -29,7 +33,6 @@
 		B8F54D781ECACEF9009855D1 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F54D771ECACEF9009855D1 /* logo.png */; };
 		B8F54D7B1ECAD18B009855D1 /* statusbar.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F54D791ECAD18B009855D1 /* statusbar.png */; };
 		B8F54D7C1ECAD18B009855D1 /* statusbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F54D7A1ECAD18B009855D1 /* statusbar@2x.png */; };
-		B8F54D861ECAD5BE009855D1 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F54D841ECAD5BE009855D1 /* APIManager.m */; };
 		B8F54D8A1ECAD626009855D1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F54D891ECAD626009855D1 /* User.m */; };
 		B8F54D8D1ECAD6CC009855D1 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F54D8C1ECAD6CC009855D1 /* BaseModel.m */; };
 		B8F54D911ECAE3C9009855D1 /* NSDictionary+JKSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F54D901ECAE3C9009855D1 /* NSDictionary+JKSafeAccess.m */; };
@@ -37,6 +40,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8529BCE1EDF9F5C00F14D0A /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		B8529BCF1EDF9F5C00F14D0A /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		B8529BD01EDF9F5C00F14D0A /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		B8529BD31EDF9F7600F14D0A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		B8529BD41EDF9F7600F14D0A /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		B8529BD61EDFA72400F14D0A /* NSString+JKDictionaryValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKDictionaryValue.h"; sourceTree = "<group>"; };
+		B8529BD71EDFA72400F14D0A /* NSString+JKDictionaryValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKDictionaryValue.m"; sourceTree = "<group>"; };
+		B8529BD91EDFA73300F14D0A /* NSDictionary+JKJSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JKJSONString.h"; sourceTree = "<group>"; };
+		B8529BDA1EDFA73300F14D0A /* NSDictionary+JKJSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JKJSONString.m"; sourceTree = "<group>"; };
+		B8529BDC1EDFB08B00F14D0A /* DNSPod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DNSPod.entitlements; sourceTree = "<group>"; };
 		B86205111ECEA04700F7888F /* Domain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		B86205121ECEA04700F7888F /* Domain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Domain.m; sourceTree = "<group>"; };
 		B86205141ECEB38B00F7888F /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
@@ -73,9 +86,6 @@
 		B8F54D771ECACEF9009855D1 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		B8F54D791ECAD18B009855D1 /* statusbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusbar.png; sourceTree = "<group>"; };
 		B8F54D7A1ECAD18B009855D1 /* statusbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statusbar@2x.png"; sourceTree = "<group>"; };
-		B8F54D831ECAD5BE009855D1 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
-		B8F54D841ECAD5BE009855D1 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
-		B8F54D851ECAD5BE009855D1 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		B8F54D881ECAD626009855D1 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B8F54D891ECAD626009855D1 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B8F54D8B1ECAD6CC009855D1 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
@@ -97,6 +107,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8529BCC1EDF9F5C00F14D0A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B8529BD21EDF9F6B00F14D0A /* DataManager */,
+				B8529BCD1EDF9F5C00F14D0A /* APIManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B8529BCD1EDF9F5C00F14D0A /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				B8529BCE1EDF9F5C00F14D0A /* APIManager.h */,
+				B8529BCF1EDF9F5C00F14D0A /* APIManager.m */,
+				B8529BD01EDF9F5C00F14D0A /* Constant.h */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		B8529BD21EDF9F6B00F14D0A /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B8529BD31EDF9F7600F14D0A /* DataManager.h */,
+				B8529BD41EDF9F7600F14D0A /* DataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		B862051A1ECEC6E900F7888F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,12 +220,13 @@
 		B8F54D541ECAC567009855D1 /* DNSPod */ = {
 			isa = PBXGroup;
 			children = (
+				B8529BDC1EDFB08B00F14D0A /* DNSPod.entitlements */,
+				B8529BCC1EDF9F5C00F14D0A /* Manager */,
 				B8A25F1E1ED423A30085C843 /* Vendor */,
 				B8F54D6A1ECAC9CF009855D1 /* Controller */,
 				B8BC40101ED2A2FE006B3CF7 /* View */,
 				B8F54D8E1ECAE3B0009855D1 /* Category */,
 				B8F54D871ECAD5C6009855D1 /* Model */,
-				B8F54D821ECAD5BE009855D1 /* APIManager */,
 				B8F54D551ECAC567009855D1 /* AppDelegate.h */,
 				B8F54D561ECAC567009855D1 /* AppDelegate.m */,
 				B8F54D5B1ECAC567009855D1 /* Assets.xcassets */,
@@ -230,16 +269,6 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		B8F54D821ECAD5BE009855D1 /* APIManager */ = {
-			isa = PBXGroup;
-			children = (
-				B8F54D831ECAD5BE009855D1 /* APIManager.h */,
-				B8F54D841ECAD5BE009855D1 /* APIManager.m */,
-				B8F54D851ECAD5BE009855D1 /* Constant.h */,
-			);
-			path = APIManager;
-			sourceTree = "<group>";
-		};
 		B8F54D871ECAD5C6009855D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +291,10 @@
 		B8F54D8E1ECAE3B0009855D1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				B8529BD91EDFA73300F14D0A /* NSDictionary+JKJSONString.h */,
+				B8529BDA1EDFA73300F14D0A /* NSDictionary+JKJSONString.m */,
+				B8529BD61EDFA72400F14D0A /* NSString+JKDictionaryValue.h */,
+				B8529BD71EDFA72400F14D0A /* NSString+JKDictionaryValue.m */,
 				B8F54D921ECAE3D7009855D1 /* NSArray+JKSafeAccess.h */,
 				B8F54D931ECAE3D7009855D1 /* NSArray+JKSafeAccess.m */,
 				B8F54D8F1ECAE3C9009855D1 /* NSDictionary+JKSafeAccess.h */,
@@ -302,6 +335,11 @@
 					B8F54D511ECAC567009855D1 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -349,6 +387,8 @@
 			files = (
 				B8A25F1D1ED422B00085C843 /* IP.m in Sources */,
 				B86205191ECEB3B100F7888F /* Monitor.m in Sources */,
+				B8529BD81EDFA72400F14D0A /* NSString+JKDictionaryValue.m in Sources */,
+				B8529BD11EDF9F5C00F14D0A /* APIManager.m in Sources */,
 				B8F54D8D1ECAD6CC009855D1 /* BaseModel.m in Sources */,
 				B86205131ECEA04700F7888F /* Domain.m in Sources */,
 				B8F54D8A1ECAD626009855D1 /* User.m in Sources */,
@@ -359,11 +399,12 @@
 				B8BC40161ED2A34C006B3CF7 /* DynamicPopUpButtonCell.m in Sources */,
 				B86205161ECEB38B00F7888F /* Record.m in Sources */,
 				B862051E1ECEC6E900F7888F /* DomainWindowController.m in Sources */,
-				B8F54D861ECAD5BE009855D1 /* APIManager.m in Sources */,
 				B86205251ECEC7FE00F7888F /* RecordWindowController.m in Sources */,
 				B8A25F221ED423A70085C843 /* iAlert.m in Sources */,
 				B8F54D751ECACD11009855D1 /* UserViewController.m in Sources */,
 				B8F54D5A1ECAC567009855D1 /* main.m in Sources */,
+				B8529BDB1EDFA73300F14D0A /* NSDictionary+JKJSONString.m in Sources */,
+				B8529BD51EDF9F7600F14D0A /* DataManager.m in Sources */,
 				B8F54D571ECAC567009855D1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DNSPod/DNSPod.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DNSPod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -486,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DNSPod/DNSPod.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DNSPod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

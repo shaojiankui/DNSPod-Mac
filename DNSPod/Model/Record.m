@@ -7,7 +7,7 @@
 //
 
 #import "Record.h"
-
+#import "DataManager.h"
 @implementation Record
 #pragma mark 添加记录
 + (NSURLSessionDataTask*)RecordCreate:(id)domain_id
@@ -105,7 +105,7 @@
 //    NSString *okip = [[responseObject jk_dictionaryForKey:@"record"] jk_stringForKey:@"value"];
     
     //如果1小时之内，提交了超过5次没有任何变动的记录修改请求，该记录会被系统锁定1小时，不允许再次修改，所以在开发和测试的过程中，请自行处理IP变动，仅在本地IP发生变动的情况下才调用本接口。
-    NSMutableDictionary *ddnsList = [[[NSUserDefaults standardUserDefaults] dictionaryForKey:@"ddnsList"] mutableCopy] ?: [NSMutableDictionary dictionary];
+    NSMutableDictionary *ddnsList = [DataManager ddnsList] ?: [NSMutableDictionary dictionary];
     
     NSMutableDictionary *domainRecord = [[ddnsList jk_dictionaryForKey:record_id?:@""] mutableCopy];
     if ([[domainRecord objectForKey:@"value"] isEqualToString:value]) {
@@ -114,8 +114,7 @@
     }
     return [[APIManager sharedManager] POST:@"Record.Ddns" parameters:parameters success:^(NSURLResponse *response, id responseObject) {
         [ddnsList setObject:parameters forKey:record_id?:@"noid"];
-        [[NSUserDefaults standardUserDefaults] setObject:ddnsList forKey:@"ddnsList"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        [DataManager saveDdnsList:ddnsList];
 
         success(response,responseObject);
     } failure:^(NSURLResponse *response, NSError *error) {

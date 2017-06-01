@@ -14,6 +14,7 @@
 #import "OprationCell.h"
 #import "IP.h"
 #import "iAlert.h"
+#import "DataManager.h"
 @interface RecordWindowController ()<NSMenuDelegate>
 {
     NSMutableArray *_records;
@@ -134,7 +135,9 @@
         NSButtonCell *buttonCell = [tableColumn dataCellForRow:row];
         buttonCell.target = self;
         buttonCell.action = @selector(ddnsButtonTouched:);
-        NSDictionary *ddnss =  [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"ddnsList"];
+        
+        
+        NSDictionary *ddnss =  [DataManager ddnsList];
         if ([ddnss jk_hasKey:[recordDic jk_stringForKey:@"id"]]) {
             buttonCell.title = @"取消";
         }else{
@@ -176,10 +179,9 @@
 
     NSButtonCell *button = [tableView selectedCell];
     if ([button.title isEqualToString:@"取消"]) {
-        NSMutableDictionary *ddnss =  [[[NSUserDefaults standardUserDefaults] dictionaryForKey:@"ddnsList"] mutableCopy]?:[NSMutableDictionary dictionary];
+        NSMutableDictionary *ddnss =  [DataManager ddnsList]?:[NSMutableDictionary dictionary];
         [ddnss  removeObjectForKey:[recordDic jk_stringForKey:@"id"]];
-        [[NSUserDefaults standardUserDefaults] setObject:ddnss forKey:@"ddnsList"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        [DataManager saveDdnsList:ddnss];
         button.title = @"DDNS";
         return;
     }
@@ -204,7 +206,7 @@
 + (void)ddns{
     
     [IP whatismyip:^(NSURLResponse *response, id responseObject) {
-        NSMutableDictionary *ddnsList = [[[NSUserDefaults standardUserDefaults] dictionaryForKey:@"ddnsList"] mutableCopy] ?: [NSMutableDictionary dictionary];
+        NSMutableDictionary *ddnsList =[DataManager ddnsList] ?: [NSMutableDictionary dictionary];
 
         for (id domainID in [ddnsList allKeys]) {
             NSDictionary *recordDic = [ddnsList objectForKey:domainID];

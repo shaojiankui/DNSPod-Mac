@@ -11,7 +11,7 @@
 #import "User.h"
 @interface AppDelegate ()<NSMenuDelegate>
 
-@property (weak) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSWindow *window;                      
 @end
 
 @implementation AppDelegate
@@ -32,6 +32,7 @@
             [weakSelf.popover close];
         }
     }];
+    
 //    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"ddnsList"];
     [self autoLogin];
     [self performSelector:@selector(ddns) withObject:nil afterDelay:60.0];
