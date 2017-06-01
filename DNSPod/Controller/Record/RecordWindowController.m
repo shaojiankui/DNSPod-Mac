@@ -149,23 +149,23 @@
     return nil;
 }
 - (void)deleteButtonTouched:(NSTableView*)tableView{
-    NSButtonCell *button = [tableView selectedCell];
-    NSDictionary *recordDic = [_records jk_objectWithIndex:[tableView selectedRow]];
+//    NSButtonCell *button = [tableView selectedCell];
+//    NSDictionary *recordDic = [_records jk_objectWithIndex:[tableView selectedRow]];
     
 }
 - (void)disableButtonTouched:(NSTableView*)tableView{
-    NSButtonCell *button = [tableView selectedCell];
-    NSDictionary *recordDic = [_records jk_objectWithIndex:[tableView selectedRow]];
+//    NSButtonCell *button = [tableView selectedCell];
+//    NSDictionary *recordDic = [_records jk_objectWithIndex:[tableView selectedRow]];
     
 }
 - (void)enableButtonTouched:(NSTableView*)tableView{
-    NSButtonCell *button = [tableView selectedCell];
-    NSDictionary *recordDic = [_records jk_objectWithIndex:[tableView selectedRow]];
+//    NSButtonCell *button = [tableView selectedCell];
+//    NSDictionary *recordDic = [_records jk_objectWithIndex:[tableView selectedRow]];
     
 }
 - (void)saveButtonTouched:(NSTableView*)tableView{
-    NSButtonCell *button = [tableView selectedCell];
-    NSDictionary *recordDic = [_records jk_objectWithIndex:[tableView selectedRow]];
+//    NSButtonCell *button = [tableView selectedCell];
+//    NSDictionary *recordDic = [_records jk_objectWithIndex:[tableView selectedRow]];
     
 }
 //    NSEvent *event = [NSApp currentEvent];
