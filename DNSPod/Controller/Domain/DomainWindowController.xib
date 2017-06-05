@@ -25,7 +25,7 @@
                     <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="34" horizontalPageScroll="10" verticalLineScroll="34" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUL-8E-Bve">
                         <rect key="frame" x="0.0" y="-1" width="648" height="432"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <clipView key="contentView" ambiguous="YES" id="PHC-SS-Ajg">
+                        <clipView key="contentView" ambiguous="YES" copiesOnScroll="NO" id="PHC-SS-Ajg">
                             <rect key="frame" x="1" y="0.0" width="646" height="431"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>

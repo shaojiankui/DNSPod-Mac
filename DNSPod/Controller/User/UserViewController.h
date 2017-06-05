@@ -28,6 +28,8 @@
 @property (weak) IBOutlet NSTextField *weixinTextField;
 @property (weak) IBOutlet NSTextField *usergradeTextField;
 @property (weak) IBOutlet NSTextField *qqTextField;
+@property (weak) IBOutlet NSTextField *lastDate;
+
 - (IBAction)logoutTouched:(id)sender;
 - (IBAction)panelTouched:(id)sender;
 

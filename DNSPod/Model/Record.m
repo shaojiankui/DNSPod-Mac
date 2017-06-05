@@ -8,6 +8,7 @@
 
 #import "Record.h"
 #import "DataManager.h"
+#import "LogWriter.h"
 @implementation Record
 #pragma mark 添加记录
 + (NSURLSessionDataTask*)RecordCreate:(id)domain_id
@@ -107,6 +108,8 @@
     //如果1小时之内，提交了超过5次没有任何变动的记录修改请求，该记录会被系统锁定1小时，不允许再次修改，所以在开发和测试的过程中，请自行处理IP变动，仅在本地IP发生变动的情况下才调用本接口。
     NSMutableDictionary *ddnsList = [DataManager ddnsList] ?: [NSMutableDictionary dictionary];
     
+
+    
     NSMutableDictionary *domainRecord = [[ddnsList jk_dictionaryForKey:record_id?:@""] mutableCopy];
     if ([[domainRecord objectForKey:@"value"] isEqualToString:value]) {
         NSLog(@"IP无改动,跳过DDNS更新");
@@ -116,6 +119,9 @@
         [ddnsList setObject:parameters forKey:record_id?:@"noid"];
         [DataManager saveDdnsList:ddnsList];
 
+        [LogWriter writeLog:[NSString stringWithFormat:@"域名:%@IP变更为:%@",sub_domain?:@"",[responseObject jk_stringForKey:@"ip"]?:@""] type:@"get ip"];
+
+        
         success(response,responseObject);
     } failure:^(NSURLResponse *response, NSError *error) {
         failure(response,error);

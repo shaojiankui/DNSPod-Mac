@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "UserViewController.h"
 #import "User.h"
+#import "DateManager.h"
+#import "LogWriter.h"
 @interface AppDelegate ()<NSMenuDelegate>
 
 @property (weak) IBOutlet NSWindow *window;                      
@@ -24,7 +26,8 @@
     self.statusItem.target = self;
     self.statusItem.button.action = @selector(showPopover:);
   
-    self.popover.contentViewController = [[UserViewController alloc]initWithNibName:@"UserViewController" bundle:nil];
+    self.userViewController = [[UserViewController alloc]initWithNibName:@"UserViewController" bundle:nil];
+    self.popover.contentViewController = self.userViewController;
     
     __weak typeof (self) weakSelf = self;
     [NSEvent addGlobalMonitorForEventsMatchingMask:NSEventMaskLeftMouseDown handler:^(NSEvent * event) {
@@ -60,9 +63,12 @@
     }
 }
 - (void)ddns{
+    [LogWriter writeLog:@"试图DDNS更新" type:@"try update"];
+    NSLog(@"试图DDNS更新");
     [self performSelector:@selector(ddns) withObject:nil afterDelay:60.0];
     [RecordWindowController ddns];
-    NSLog(@"DDNS更新");
+    self.userViewController.lastDate.stringValue = [DateManager stringConvert_YMDHMS_FromDate:[NSDate date]];
+  
 }
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application

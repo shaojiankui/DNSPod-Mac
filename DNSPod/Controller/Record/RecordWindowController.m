@@ -15,6 +15,7 @@
 #import "IP.h"
 #import "iAlert.h"
 #import "DataManager.h"
+#import "LogWriter.h"
 @interface RecordWindowController ()<NSMenuDelegate>
 {
     NSMutableArray *_records;
@@ -207,11 +208,13 @@
     
     [IP whatismyip:^(NSURLResponse *response, id responseObject) {
         NSMutableDictionary *ddnsList =[DataManager ddnsList] ?: [NSMutableDictionary dictionary];
+        [LogWriter writeLog:[NSString stringWithFormat:@"当前IP:%@",[responseObject jk_stringForKey:@"ip"]?:@""] type:@"get ip"];
 
         for (id domainID in [ddnsList allKeys]) {
             NSDictionary *recordDic = [ddnsList objectForKey:domainID];
             
             [Record RecordDdns:domainID record_id:[recordDic jk_stringForKey:@"record_id"] sub_domain:[recordDic jk_stringForKey:@"name"] record_line:[recordDic jk_stringForKey:@"line"] record_line_id:[recordDic jk_stringForKey:@"line_id"] value:[responseObject jk_stringForKey:@"ip"] success:^(NSURLResponse *response, id responseObject) {
+
             } failure:^(NSURLResponse *response, NSError *error) {
                 
             }];

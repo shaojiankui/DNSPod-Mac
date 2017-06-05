@@ -20,6 +20,8 @@
 		B86205261ECEC7FE00F7888F /* RecordWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86205241ECEC7FE00F7888F /* RecordWindowController.xib */; };
 		B862052A1ECEC81E00F7888F /* MonitorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86205281ECEC81E00F7888F /* MonitorWindowController.m */; };
 		B862052B1ECEC81E00F7888F /* MonitorWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86205291ECEC81E00F7888F /* MonitorWindowController.xib */; };
+		B89269041EE4F3BF008BDEF9 /* DateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B89269031EE4F3BF008BDEF9 /* DateManager.m */; };
+		B89269081EE4F600008BDEF9 /* LogWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B89269071EE4F600008BDEF9 /* LogWriter.m */; };
 		B8A25F1D1ED422B00085C843 /* IP.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A25F1C1ED422B00085C843 /* IP.m */; };
 		B8A25F221ED423A70085C843 /* iAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A25F211ED423A70085C843 /* iAlert.m */; };
 		B8BC40161ED2A34C006B3CF7 /* DynamicPopUpButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC40151ED2A34C006B3CF7 /* DynamicPopUpButtonCell.m */; };
@@ -65,6 +67,10 @@
 		B86205271ECEC81E00F7888F /* MonitorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorWindowController.h; sourceTree = "<group>"; };
 		B86205281ECEC81E00F7888F /* MonitorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorWindowController.m; sourceTree = "<group>"; };
 		B86205291ECEC81E00F7888F /* MonitorWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonitorWindowController.xib; sourceTree = "<group>"; };
+		B89269021EE4F3BF008BDEF9 /* DateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateManager.h; sourceTree = "<group>"; };
+		B89269031EE4F3BF008BDEF9 /* DateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateManager.m; sourceTree = "<group>"; };
+		B89269061EE4F600008BDEF9 /* LogWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogWriter.h; sourceTree = "<group>"; };
+		B89269071EE4F600008BDEF9 /* LogWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogWriter.m; sourceTree = "<group>"; };
 		B8A25F1B1ED422B00085C843 /* IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IP.h; sourceTree = "<group>"; };
 		B8A25F1C1ED422B00085C843 /* IP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IP.m; sourceTree = "<group>"; };
 		B8A25F201ED423A70085C843 /* iAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAlert.h; sourceTree = "<group>"; };
@@ -110,6 +116,8 @@
 		B8529BCC1EDF9F5C00F14D0A /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				B89269051EE4F600008BDEF9 /* LogWriter */,
+				B89269011EE4F3BF008BDEF9 /* DateManager */,
 				B8529BD21EDF9F6B00F14D0A /* DataManager */,
 				B8529BCD1EDF9F5C00F14D0A /* APIManager */,
 			);
@@ -164,6 +172,24 @@
 				B86205241ECEC7FE00F7888F /* RecordWindowController.xib */,
 			);
 			path = Record;
+			sourceTree = "<group>";
+		};
+		B89269011EE4F3BF008BDEF9 /* DateManager */ = {
+			isa = PBXGroup;
+			children = (
+				B89269021EE4F3BF008BDEF9 /* DateManager.h */,
+				B89269031EE4F3BF008BDEF9 /* DateManager.m */,
+			);
+			path = DateManager;
+			sourceTree = "<group>";
+		};
+		B89269051EE4F600008BDEF9 /* LogWriter */ = {
+			isa = PBXGroup;
+			children = (
+				B89269061EE4F600008BDEF9 /* LogWriter.h */,
+				B89269071EE4F600008BDEF9 /* LogWriter.m */,
+			);
+			path = LogWriter;
 			sourceTree = "<group>";
 		};
 		B8A25F1E1ED423A30085C843 /* Vendor */ = {
@@ -390,6 +416,7 @@
 				B8529BD81EDFA72400F14D0A /* NSString+JKDictionaryValue.m in Sources */,
 				B8529BD11EDF9F5C00F14D0A /* APIManager.m in Sources */,
 				B8F54D8D1ECAD6CC009855D1 /* BaseModel.m in Sources */,
+				B89269041EE4F3BF008BDEF9 /* DateManager.m in Sources */,
 				B86205131ECEA04700F7888F /* Domain.m in Sources */,
 				B8F54D8A1ECAD626009855D1 /* User.m in Sources */,
 				B862052A1ECEC81E00F7888F /* MonitorWindowController.m in Sources */,
@@ -398,6 +425,7 @@
 				B8F54D911ECAE3C9009855D1 /* NSDictionary+JKSafeAccess.m in Sources */,
 				B8BC40161ED2A34C006B3CF7 /* DynamicPopUpButtonCell.m in Sources */,
 				B86205161ECEB38B00F7888F /* Record.m in Sources */,
+				B89269081EE4F600008BDEF9 /* LogWriter.m in Sources */,
 				B862051E1ECEC6E900F7888F /* DomainWindowController.m in Sources */,
 				B86205251ECEC7FE00F7888F /* RecordWindowController.m in Sources */,
 				B8A25F221ED423A70085C843 /* iAlert.m in Sources */,
